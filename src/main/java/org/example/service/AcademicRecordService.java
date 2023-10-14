@@ -1,7 +1,11 @@
 package org.example.service;
 
-public interface AcademicRecordService {
-  Double calculateAverage();
+import org.example.model.Grade;
 
-  Integer sumNumberOfGrades();
+import java.util.List;
+
+public interface AcademicRecordService {
+  Double calculateAverage(List<Grade> grades);
+
+  Integer sumNumberOfGrades(List<Grade> grades);
 }
