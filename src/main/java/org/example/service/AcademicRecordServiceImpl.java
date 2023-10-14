@@ -17,12 +17,12 @@ public class AcademicRecordServiceImpl implements AcademicRecordService {
 
   @Override
   public Double calculateAverage(List<Grade> grades) {
-    logger.info("El calculo de promedio de notas es: ");
     double averageGrades = 0;
     if (!grades.isEmpty()) {
       for (Grade grade : grades) {
         averageGrades = averageGrades + grade.grade();
       }
+      logger.info("El calculo de promedio fue realizado correctamente: ");
       return averageGrades/grades.size();
     }
     else {
@@ -40,12 +40,12 @@ public class AcademicRecordServiceImpl implements AcademicRecordService {
 
     List<Grade> gradeList = this.gradeRepository.findAllGrades();
     // TODO sum number of grades and return the summation*/
-    logger.info("La suma del número de calificaciones es:");
     int numberOfGrades = 0;
     if(!grades.isEmpty()) {
       for (Grade grade : grades) {
         numberOfGrades ++;
       }
+      logger.info("La suma del número de calificaciones fue realizada correctamente :");
       return numberOfGrades;
     }
     return null;
